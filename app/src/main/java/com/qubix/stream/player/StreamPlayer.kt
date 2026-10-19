@@ -45,11 +45,6 @@ class StreamPlayer(context: Context) {
         val factory = httpFactory.apply {
             source.headers["Referer"]?.let { setDefaultRequestProperties(mapOf("Referer" to it)) }
         }
-        val mediaSource = if (source.isM3u8 || source.url.contains("m3u8")) {
-            HlsMediaSource.Factory(factory).createMediaSource(MediaItem.fromUri(source.url))
-        } else {
-            ProgressiveMediaSource.Factory(factory).createMediaSource(MediaItem.fromUri(source.url))
-        }
         // Subtitle: pakai yang bahasa Indonesia dulu
         val subs = source.subtitles.sortedBy { if (it.language == "id") 0 else 1 }
         val configs = subs.map {
