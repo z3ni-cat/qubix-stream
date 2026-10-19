@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.qubix.stream"
-    compileSdk = 37
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.qubix.stream"

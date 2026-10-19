@@ -18,7 +18,7 @@ compileSdk mengikuti syarat TERTINGGI, bukan downgrade library.
 | Core KTX | 1.15.0 | Google Maven | 34 (OK ≤ 37) | ✓ dl.google.com |
 
 **Keputusan:**
-- `compileSdk = 37` (syarat tertinggi: Compose/Media3/Coil3/Room butuh ≥35; 37 = versi yang dipakai Cloudstream, production-proven)
+- `compileSdk = 35` (syarat tertinggi: Compose/Media3/Coil3/Room butuh ≥35; 35 (API 37 belum rilis; 35 memenuhi syarat 226535 semua library)
 - `targetSdk = 36`, `minSdk = 26`
 - AGP 8.5.2, Kotlin 2.0.20, JVM 17
 - Retrofit 2.11.0 (BUKAN 3.0.0 — major baru, hindari breaking API)
